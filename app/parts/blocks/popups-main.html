@@ -1,66 +1,92 @@
 <section class="popups">
-	<div @click="closePopup" x-cloak x-show.transition.opacity.duration.300ms="popup != null" class="popups__bg"></div>
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup === 'contacts'" class="popup popup-contacts"
+		:class="{'popup--active': popup === 'contacts'}">
+		<div class="popup__inner" @click.self="popup = null">
+			<div class="popup__content">
+				<button @click="popup = null" class="popup__button-close" type="button" aria-label="Закрыть">
+					<img alt="Закрыть" decoding="async" width="16" height="16" src="images/dist/close-white.svg">
+				</button>
 
-	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'contacts'" class="popup popup-contacts">
-		<div class="popup-contacts__inner">
-			<div class="popup-contacts__img">
-				<div class="popup-contacts__socials">
-					<a href="" target="_blank"><img src="images/dist/vk-icon.svg" width="20" height="12" alt="" /></a>
-					<a href="" target="_blank"><img src="images/dist/inst-icon.svg" width="16" height="16" alt="" /></a>
-					<a href="" target="_blank"><img src="images/dist/tg-icon.svg" width="16" height="16" alt="" /></a>
-				</div>
-			</div>
-			<div class="popup-contacts__wrapper">
-				<div class="title">
-					<span>Контакты</span>
+				<div class="popup-contacts__header">
+					<video class="popup-contacts__background" src="images/bg-modal.mp4" preload="auto" playsinline muted loop
+						autoplay></video>
 				</div>
 
-				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
-					<input
-						class="popup__input"
-						type="text"
-						name="fio"
-						placeholder="Представьтесь (ФИО / Компания)"
-						required
-					/>
-					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
-					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
-				</form>
+				<div class="popup-contacts__wrapper">
+					<h2 class="title">
+						<hr>
+						<span>Контакты</span>
+						<hr>
+					</h2>
+
+					<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST"
+						class="popup-contacts__form">
+
+						<div class="popup__label">
+							<input class="popup__input" type="text" name="fio" placeholder="Представьтесь" autocomplete="off" required />
+							<label>Представьтесь</label>
+						</div>
+
+						<div class="popup__label">
+							<input class="popup__input" type="email" name="email" placeholder="E-mail" required />
+							<label>E-mail для обратной связи</label>
+						</div>
+
+						<div class="popup__label">
+							<textarea class="popup__input" rows="5" placeholder="Сообщение" name="message"></textarea>
+							<label>Введите ваше сообщение</label>
+						</div>
+
+						<button type="submit" class="popup__submit">
+							<span class="gradient-text">Нанять меня</span>
+						</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec1'" class="popup">
-		<div class="popup__img">
-			<img decoding="async" loading="lazy" src="images/card1.gif" alt="" />
-		</div>
+	<section x-cloak x-show.transition.opacity.duration.400ms="popup === 'spec1'" class="popup"
+		:class="{'popup--active': popup === 'spec1'}">
+		<div class="popup__inner" @click.self="popup = null">
+			<div class="popup__content">
+				<button @click="popup = null" class="popup__button-close" type="button" aria-label="Закрыть">
+					<img alt="Закрыть" decoding="async" width="16" height="16" src="images/dist/close-dark.svg">
+					<img class="mobile-icon" alt="Закрыть" decoding="async" width="16" height="16"
+						src="images/dist/close-white.svg">
+				</button>
 
-		<div class="popup__info">
-			<span class="popup__info_title">Web-дизайн</span>
+				<div class="popup__img">
+					<img decoding="async" loading="lazy" src="images/card1.gif" alt="" />
+				</div>
 
-			<div class="popup__info_desc">
-				<p>1) брифинг с заказчиком (в живую и удаленно);</p>
-				<br />
-				<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
-				<p>3) отрисовка иконок;</p>
-				<br />
-				<p>4) редизайн сайтов;</p>
-				<p>5) адаптивный дизайн;</p>
-				<p>6) mobile first;</p>
-				<br />
-				<p>7) создание:</p>
-				<p>а) дизайн-концепций;</p>
-				<p>б) gif-анимаций;</p>
-				<p>в) баннеров;</p>
-				<p>г) логотипов/эмблем.</p>
-				<br />
-				<p>9) разработка презентаций проектов;</p>
-				<p>10) передача макета на верстку;</p>
-				<p>11) оформление UI-KIT.</p>
+				<div class="popup__info">
+					<span class="popup__info_title">Web-дизайн</span>
+
+					<div class="popup__info_desc">
+						<p>1) брифинг с заказчиком (в живую и удаленно);</p>
+						<br />
+						<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
+						<p>3) отрисовка иконок;</p>
+						<br />
+						<p>4) редизайн сайтов;</p>
+						<p>5) адаптивный дизайн;</p>
+						<p>6) mobile first;</p>
+						<br />
+						<p>7) создание:</p>
+						<p>а) дизайн-концепций;</p>
+						<p>б) gif-анимаций;</p>
+						<p>в) баннеров;</p>
+						<p>г) логотипов/эмблем.</p>
+						<br />
+						<p>9) разработка презентаций проектов;</p>
+						<p>10) передача макета на верстку;</p>
+						<p>11) оформление UI-KIT.</p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec2'" class="popup">
 		<div class="popup__img">

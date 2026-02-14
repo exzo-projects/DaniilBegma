@@ -1,0 +1,41 @@
+.translator {
+  display: inline-block;
+  position: relative;
+
+  $root: &;
+
+  &-button {
+    display: flex;
+  }
+
+  &-select {
+    background-color: $black;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 25px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(240, 240, 240, 0.15);
+    opacity: 0;
+    visibility: collapse;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: opacity .3s ease, visibility .3s linear, transform .3s ease;
+
+    #{$root}--active & {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      pointer-events: all;
+    }
+  }
+
+  &-option {
+    display: flex;
+  }
+}
+

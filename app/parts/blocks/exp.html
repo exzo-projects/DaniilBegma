@@ -1,25 +1,32 @@
 <section id="experience" class="exp">
   <div class="container">
     <div class="exp__inner">
-      <h2 class="title">
-        <span>Опыт работы</span>
-      </h2>
+			<h2 class="title">
+				<hr>
+				<span>Опыт работы</span>
+				<hr>
+			</h2>
 
-      <div class="exp__wrapper">
-        <div class="exp__item no-counter">
-			<div class="exp__item_meta">
-			  <span class="exp__item_meta--title">
-				UX/UI-дизайнер
-			  </span>
-			  <span class="exp__item_meta--company"
-				>Сбербанк IT</span
-			  >
-			  <span class="exp__item_meta--duration"
-				>Ноябрь 2022 — По наст. вр.</span
-			  >
-			</div>
-			<div class="wave"></div>
-		  </div>
+      <div class="exp__wrapper" style="counter-reset: number 12">
+        <div class="exp__item">
+          <div class="exp__item_meta">
+            <span class="exp__item_meta--title">
+              UX/UI-дизайнер
+            </span>
+            <span class="exp__item_meta--company">
+              Сбербанк IT
+            </span>
+            <span class="exp__item_meta--duration">
+              Ноябрь 2022 — По наст. вр.
+            </span>
+            <div class="exp__item_button gradient-link-wrapper">
+              <button @click="openPopup('sber')" type="button" class="button-default button-default--white button-default--white-alt button-default--sm">
+                Подробнее
+              </button>
+            </div>
+          </div>
+          <div class="wave"></div>
+        </div>
 
         <div class="exp__item">
           <div class="exp__item_block">
@@ -42,23 +49,15 @@
               </li>
               <li>участие в создании общего UI-Kit;</li>
             </ul>
-            <button
-              @click="openPopup('papajohns')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('papajohns')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> Lead UX/UI-дизайнер </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Папа Джонс</span
-            >
-            <span class="exp__item_meta--duration"
-              >Май 2020 — по настоящее время</span
-            >
+            <span class="exp__item_meta--company gradient-text">Папа Джонс</span>
+            <span class="exp__item_meta--duration">Май 2020 — по настоящее время</span>
           </div>
         </div>
 
@@ -80,9 +79,7 @@
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> UX/UI-дизайнер </span>
             <span class="exp__item_meta--company gradient-text">Кибер-Ром</span>
-            <span class="exp__item_meta--duration"
-              >Июнь 2022 — Октябрь 2022</span
-            >
+            <span class="exp__item_meta--duration">Июнь 2022 — Октябрь 2022</span>
           </div>
         </div>
 
@@ -109,11 +106,7 @@
               </li>
               <li>Визуализация макетов:</li>
             </ul>
-            <button
-              @click="openPopup('psih')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('psih')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
@@ -127,7 +120,7 @@
       </div>
 
       <div class="exp__button">
-        <a href="" class="button-default">Читать полностью</a>
+        <a href="" class="button-default button-default--white button-default--sm-mobile">Читать полностью</a>
       </div>
     </div>
   </div>

@@ -1,11 +1,13 @@
 {
-	"name": "Grizzly",
+	"name": "site",
 	"version": "1.0.0",
-	"description": "Grizzly",
+	"description": "Site",
 	"main": "index.js",
 	"type": "module",
 	"browserslist": [
-		"last 1 version"
+		"last 1 version",
+		"> 1%",
+		"not dead"
 	],
 	"scripts": {
 		"start": "gulp",
@@ -22,6 +24,7 @@
 		"browser-sync": "^2.27.10",
 		"browsersync-ssi": "^0.2.4",
 		"cssnano": "^5.1.12",
+		"cssnano-preset-advanced": "^7.0.1",
 		"del": "^6.1.1",
 		"gulp": "^4.0.2",
 		"gulp-changed": "^4.0.3",

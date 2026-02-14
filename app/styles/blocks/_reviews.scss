@@ -1,171 +1,354 @@
 .reviews {
-	padding-top: 60px;
-	padding-bottom: 180px;
+  padding-top: 60px;
+  padding-bottom: 180px;
 
-	& .title {
-		margin-bottom: 140px;
-	}
+  & .title {
+    margin-bottom: 140px;
+  }
 
-	&__wrapper {
-		& .swiper-container {
-			overflow: unset;
-		}
-	}
+  &__wrapper {
+    & .swiper {
+      overflow: unset;
+    }
+  }
 
-	&__item {
-		padding: 60px;
-		min-height: 450px;
-		padding-bottom: 80px;
-		max-width: 1070px;
-		width: 100%;
-		background-color: #fafafa;
-		border-radius: 20px;
-		position: relative;
+  &__item {
+    padding: 60px;
+    min-height: 450px;
+    padding-bottom: 80px;
+    max-width: 1070px;
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    border-radius: 20px;
+    position: relative;
 
-		&::before,
-		&::after {
-			position: absolute;
-			content: "";
-			width: 50%;
-			height: 50%;
-			border: 1px solid transparent;
-			background: linear-gradient(to right, white, white), $gradient;
-			background-origin: padding-box, border-box;
-			background-clip: padding-box, border-box;
-			background-repeat: no-repeat;
-			z-index: -1;
-			border-radius: 20px;
-		}
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 50%;
+      border: 1px solid transparent;
+      background: linear-gradient(to right, white, white), $gradient;
+      background-origin: padding-box, border-box;
+      background-clip: padding-box, border-box;
+      background-repeat: no-repeat;
+      z-index: -1;
+      border-radius: 20px;
+    }
 
-		&::before {
-			top: -60px;
-			left: -60px;
-		}
+    &::before {
+      top: -60px;
+      left: -60px;
+    }
 
-		&::after {
-			bottom: -60px;
-			right: -60px;
-		}
+    &::after {
+      bottom: -60px;
+      right: -60px;
+    }
 
-		&_meta {
-			display: flex;
-			align-items: center;
-			position: relative;
-		}
+    &_meta {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-		&_img {
-			& img {
-				width: 150px;
-				height: 150px;
-				border-radius: 6px;
-				box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-			}
-		}
+    &_img {
+      & img {
+        width: 150px;
+        height: 150px;
+        border-radius: 6px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+      }
+    }
 
-		&_about {
-			margin-left: 40px;
-			display: flex;
-			flex-direction: column;
-			letter-spacing: 0.04em;
+    &_about {
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.04em;
+      gap: 10px;
 
-			&--date {
-				font-size: 16px;
-				color: #bdbdbd;
-				margin-bottom: 10px;
-			}
+      &--date {
+        font-size: 16px;
+        color: #bdbdbd;
+      }
 
-			&--name {
-				color: $black;
-				font-size: 22px;
-				margin-bottom: 10px;
-			}
+      &--name {
+        color: $black;
+        font-size: 22px;
+      }
 
-			&--position {
-				font-size: 16px;
-				color: #bdbdbd;
-			}
-		}
+      &--position {
+        font-size: 16px;
+        color: #bdbdbd;
+      }
+    }
 
-		&_desc {
-			margin-top: 50px;
-			font-size: 18px;
-			line-height: 1.5;
-			color: $black;
-		}
+    &_desc {
+      margin-top: 50px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: $black;
+      
+      &:has(.reviews__more--active) {
+        & .reviews__item_text {
+          display: block;
+        }
+      }
+    }
 
-		&_additional {
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
+    &_socials,
+    &_doc {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
-		&_socials {
-			display: flex;
-			align-items: center;
-			& a {
-				&:not(:last-child) {
-					margin-right: 20px;
-				}
-			}
+    &_socials {
+      align-items: center;
 
-			& img {
-				filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg)
-					brightness(95%) contrast(99%);
-			}
-		}
+      & a {
+        display: flex;
 
-		&_doc {
-			display: flex;
-			justify-content: flex-end;
-			margin-top: 30px;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
 
-			& img {
-				max-width: 48px;
-				width: 100%;
-				box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
-			}
-		}
-	}
+      & img {
+        filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg) brightness(95%)
+          contrast(99%);
+      }
+    }
 
-	&__nav {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
-		display: flex;
-		justify-content: space-between;
-		padding: 0 13%;
+    &_doc {
+      justify-content: flex-end;
+      margin-top: 50px;
 
-		&_arrow {
-			cursor: pointer;
+      & img {
+        max-width: 48px;
+        width: 100%;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+      }
+    }
 
-			& img {
-				transition: opacity 0.2s ease;
-				filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg)
-					brightness(95%) contrast(99%);
-			}
+    &_text {
+      display: inline;
 
-			&:hover {
-				& img {
-					opacity: 0.8;
-				}
-			}
-		}
-	}
+      @media screen and (max-width: 768px) {
+        display: -webkit-box;
+        line-clamp: 7;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 13%;
+
+    &_arrow {
+      cursor: pointer;
+
+      & img {
+        transition: opacity 0.2s ease;
+        filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg) brightness(95%)
+          contrast(99%);
+      }
+
+      &:hover {
+        & img {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+
+    & .hide {
+      display: none;
+    }
+
+    & svg {
+      margin-top: 3px;
+      transition: transform 0.3s ease;
+    }
+
+    &--active {
+      & svg {
+        transform: scale(-1);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  & .translator {
+    &:first-child {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 2px;
+
+      &:last-child {
+        display: none;
+      }
+
+      &:first-child {
+        display: inline-block;
+      }
+
+      &-select {
+        left: 0;
+        translate: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1600px) {
-	.reviews {
-		&__nav {
-			padding: 0 5%;
-		}
-	}
+  .reviews {
+    &__nav {
+      padding: 0 5%;
+    }
+  }
 }
 
 @media screen and (max-width: 1350px) {
-	.reviews {
-		&__item {
-			max-width: 80%;
-		}
-	}
+  .reviews {
+    &__item {
+      max-width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .reviews {
+    padding-top: 40px;
+
+    & .title {
+      margin-bottom: 80px;
+    }
+
+    &__item {
+      padding: 40px;
+      max-width: calc(100vw - 90px);
+
+      &::before {
+        top: -20px;
+        left: -20px;
+      }
+
+      &::after {
+        bottom: -20px;
+        right: -20px;
+      }
+    }
+
+    &__nav {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews {
+    padding-bottom: 0;
+    margin-bottom: -135px;
+
+    & .title {
+      margin-bottom: 25px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__item {
+      max-width: calc(100vw - 55px);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      padding: 16px;
+      padding-bottom: 60px;
+
+      &_meta {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+
+      &_about {
+        margin-left: 0;
+        gap: 4px;
+
+        &--name {
+          font-size: 20px;
+        }
+      }
+
+      &_desc {
+        margin-top: 0;
+        line-height: 1.4;
+      }
+
+      &_doc {
+        margin-top: 0;
+        top: 16px;
+        right: 16px;
+      }
+
+      &_meta {
+        position: unset;
+      }
+
+      &_socials {
+        justify-content: center;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reviews {
+    &__item {
+      &_img {
+        width: 120px;
+        height: auto;
+      }
+
+      &_doc img {
+        width: 42px;
+        height: auto;
+      }
+    }
+  }
 }

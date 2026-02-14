@@ -1,4 +1,4 @@
-.preloader {
+.preloader {	
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,7 +9,7 @@
 	align-items: center;
 	z-index: 100;
 	overflow: hidden;
-	background-color: #fff;
+	background-color: $white;
 
 	&.active {
 		background-color: transparent;
@@ -22,22 +22,36 @@
 	}
 
 	&__logo {
+		display: flex;
 		top: 50%;
 		left: 50%;
 		position: absolute;
 		z-index: 10;
 		transform: translate(-50%, -50%);
+		max-width: 730px;
+		width: 100%;
+		padding: 0 15px;
+
+		& video {
+			width: inherit;
+			background-color: inherit;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding: 0 75px;
+		}
 	}
 
 	&__anim {
 		&_top,
 		&_bottom {
 			width: 100%;
-			min-width: 1900px;
+			height: 100dvh;
 			transition: transform 1.2s ease;
 			position: absolute;
 			left: 0;
 			will-change: transform;
+			object-fit: cover;
 		}
 
 		&_top {
@@ -52,10 +66,12 @@
 			& .preloader__anim {
 				&_top {
 					transform: translateY(-100%);
+					object-position: bottom;
 				}
 
 				&_bottom {
 					transform: translateY(100%);
+					object-position: top;
 				}
 			}
 		}
@@ -65,3 +81,4 @@
 		}
 	}
 }
+

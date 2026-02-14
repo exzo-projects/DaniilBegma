@@ -1,0 +1,25 @@
+.socials-mobile {
+  display: none;
+  position: relative;
+  background-color: $black;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    inset: -100px 0 -100px 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}

@@ -1,140 +1,238 @@
 .footer {
-	background-color: $black;
+  background-color: $black;
+  position: relative;
 
-	&__banner {
-		padding-top: 80px;
+  &__banner {
+    padding-top: 80px;
 
-		&_inner {
-			padding: 70px 140px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-image: url("../images/dist/footer-banner.jpg");
-			border-radius: 22px;
-			min-height: 365px;
-			background-position: center;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
+    &_inner {
+      padding: 70px 140px;
+      border-radius: 32px;
+      min-height: 365px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      background-color: darken($black, 5%);
+      overflow: hidden;
+    }
 
-		&_info {
-			display: flex;
-			flex-direction: column;
-			color: $white;
-			max-width: 570px;
+    &_background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
 
-			&--title {
-				font-family: "Playfair", serif;
-				font-size: 70px;
-				line-height: 1.2;
-				text-transform: uppercase;
-				margin-bottom: 25px;
-			}
+    &_info {
+      display: flex;
+      flex-direction: column;
+      color: $white;
+      max-width: 570px;
+      position: relative;
 
-			&--slogan {
-				margin-top: 25px;
-				letter-spacing: 0.04em;
-				font-size: 18px;
-				line-height: 1.4;
-			}
+      &--title {
+        font-family: "Playfair", serif;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
 
-			& hr {
-				width: 100%;
-				height: 2px;
-				color: #fff;
-				opacity: 0.75;
-			}
-		}
-	}
+      &--slogan {
+        margin-top: 25px;
+        letter-spacing: 0.04em;
+        font-size: 18px;
+        line-height: 1.4;
+      }
 
-	&__body {
-		padding: 30px 0;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		color: #b7b7b7;
-		letter-spacing: 0.02em;
-		font-size: 16px;
-		position: relative;
+      & hr {
+        width: 100%;
+        height: 2px;
+        color: #fff;
+        opacity: 0.75;
+      }
+    }
+  }
 
-		& a {
-			color: #b7b7b7;
-		}
-	}
+  &__body {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b7b7b7;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    position: relative;
 
-	&__privacy {
-		display: flex;
-		flex-direction: column;
-		transition: color 0.2s ease;
+    & a {
+      color: #b7b7b7;
+    }
+  }
 
-		& a {
-			text-decoration: underline;
+  &__privacy {
+    display: flex;
+    flex-direction: column;
+    transition: color 0.2s ease;
 
-			&:hover {
-				color: $white;
-				text-decoration: none;
-			}
-		}
-	}
+    & a {
+      text-decoration: underline;
 
-	&__logo {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
 
-		& svg path {
-			&:nth-child(23),
-			&:nth-child(13),
-			&:nth-child(10),
-			&:nth-child(8),
-			&:nth-child(7),
-			&:nth-child(5),
-			&:nth-child(2),
-			&:nth-child(4),
-			&:nth-child(21),
-			&:nth-child(18),
-			&:nth-child(16) {
-				fill: url("#logo-gradient-footer");
-			}
-		}
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-		&:hover svg defs stop {
-			&:first-child {
-				stop-color: #7776ff;
-			}
+    & svg path {
+      &:nth-child(23),
+      &:nth-child(13),
+      &:nth-child(10),
+      &:nth-child(8),
+      &:nth-child(7),
+      &:nth-child(5),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(21),
+      &:nth-child(18),
+      &:nth-child(16) {
+        fill: url("#logo-gradient-footer");
+      }
+    }
 
-			&:last-child {
-				stop-color: #ae2cf1;
-			}
-		}
-	}
+    &:hover svg defs stop {
+      &:first-child {
+        stop-color: #7776ff;
+      }
 
-	&__socials {
-		display: flex;
-		flex-direction: column;
+      &:last-child {
+        stop-color: #ae2cf1;
+      }
+    }
+  }
 
-		& a {
-			transition: color 0.2s ease;
+  &__socials {
+    display: flex;
+    flex-direction: column;
 
-			&:not(:last-child) {
-				margin-bottom: 10px;
-			}
+    & a {
+      transition: color 0.2s ease;
 
-			&:hover {
-				color: $white;
-			}
-		}
-	}
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
-	.footer {
-		&__banner {
-			&_inner {
-				min-height: auto;
-				padding: 40px 50px;
-			}
-		}
-	}
+  .footer {
+    &__banner {
+      &_inner {
+        min-height: auto;
+        padding: 40px 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .footer {
+    &__body {
+      flex-direction: column;
+      gap: 24px;
+      padding: 44px 0;
+    }
+
+    &__logo {
+      position: unset;
+      transform: none;
+      order: -1;
+    }
+
+    &__socials {
+      flex-direction: row;
+      gap: 32px;
+      order: 0;
+
+      & a:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__privacy {
+      text-align: center;
+      line-height: 1.5;
+      order: 1;
+    }
+
+    &__banner {
+      padding-top: 32px;
+
+      &_info {
+        max-width: 430px;
+
+        &--title {
+          font-size: 52px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &__banner {
+      &_inner {
+        padding: 15px;
+        padding-bottom: 205px;
+        flex-direction: column;
+        border-radius: 24px;
+      }
+
+      &_info {
+        max-width: none;
+        width: 100%;
+
+        &--title {
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+
+        &--slogan {
+          margin-top: 16px;
+        }
+
+        & hr {
+          height: 1px;
+          opacity: 1;
+        }
+      }
+
+      &_button {
+        margin-top: 32px;
+        width: 100%;
+
+        & .button-default {
+          width: inherit;
+        }
+      }
+    }
+  }
 }

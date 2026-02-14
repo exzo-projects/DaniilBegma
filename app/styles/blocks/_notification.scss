@@ -1,12 +1,20 @@
 .notifications,
 .notifications-load {
   position: fixed;
-  top: 6.875rem;
-  right: 2.5rem;
+  top: 32px;
+  right: 32px;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
+  z-index: 10;
+  pointer-events: none;
+
+  @media screen and (max-width: 968px) {
+    top: 16px;
+    right: 16px;
+  }
 }
+
 .notifications__item {
   background: linear-gradient(100.37deg, #7776ff 0, #ae2cf1 96.57%);
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
@@ -14,64 +22,56 @@
   padding: 1rem 1.5rem;
   padding-right: 3.125rem;
   color: #fff;
-  font-weight: 450;
+  font-weight: 500;
   font-size: 0.875rem;
   opacity: 0;
-  visibility: collapse;
   position: relative;
   cursor: pointer;
-}
-.notifications__item::before {
-  content: "";
-  position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
-  right: 1.25rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../images/dist/notification-close.svg);
-}
-.notifications__item:not(:first-child) {
-  margin-bottom: 0.625rem;
-}
-.notifications__item.active {
-  -webkit-animation: showNotification 0.8s forwards;
-  animation: showNotification 0.8s forwards;
-}
-.m-header .notifications,
-.m-header .notifications-load {
-  right: 0.9375rem;
-  top: 8.4375rem;
-}
-.m-header .notifications__item {
-  -webkit-backdrop-filter: blur(0.5rem);
-  backdrop-filter: blur(0.5rem);
-  background: rgba(96, 96, 96, 0.2);
-}
-@-webkit-keyframes showNotification {
-  0% {
-    -webkit-transform: translateY(-75%);
-    transform: translateY(-75%);
+  pointer-events: all;
+  display: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/dist/notification-close.svg);
   }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+
+  &:not(:first-child) {
+    margin-bottom: 0.625rem;
+  }
+
+  &.active {
+    display: flex;
+    animation: showNotification 0.8s forwards;
   }
 }
+
+.m-header {
+  & .notifications,
+  & .notifications-load {
+    right: 0.9375rem;
+    top: 8.4375rem;
+  }
+
+  & .notifications__item {
+    backdrop-filter: blur(0.5rem);
+    background: rgba(96, 96, 96, 0.2);
+  }
+}
+
 @keyframes showNotification {
   0% {
-    -webkit-transform: translateY(-75%);
     transform: translateY(-75%);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
-    visibility: visible;
   }
 }

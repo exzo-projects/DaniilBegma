@@ -2,17 +2,21 @@
 	<div class="container">
 		<div class="projects__inner">
 			<h2 class="title">
+				<hr>
 				<span>Проекты</span>
+				<hr>
 			</h2>
 
 			<div class="projects__wrapper">
-				<div @click="openPopup('rossbank')" class="projects__item" style="background-image: url(./images/dist/work1.jpg)">
+				<div @click="openPopup('rossbank')" class="projects__item"
+					style="background-image: url(./images/dist/work1.jpg)">
 					<div class="projects__item_button-wrapper">
 						<button type="button" class="projects__item_button">Россельхозбанк</button>
 					</div>
 				</div>
 
-				<div @click="openPopup('papajohns')" class="projects__item" style="background-image: url(./images/dist/work2.jpg)">
+				<div @click="openPopup('papajohns')" class="projects__item"
+					style="background-image: url(./images/dist/work2.jpg)">
 					<div class="projects__item_button-wrapper">
 						<button type="button" class="projects__item_button">Папа Джонс</button>
 					</div>
@@ -24,7 +28,8 @@
 					</div>
 				</div>
 
-				<div @click="openPopup('animedia')" class="projects__item" style="background-image: url(./images/dist/work4.jpg)">
+				<div @click="openPopup('animedia')" class="projects__item"
+					style="background-image: url(./images/dist/work4.jpg)">
 					<div class="projects__item_button-wrapper">
 						<button type="button" class="projects__item_button">Animedia.TV</button>
 					</div>
@@ -32,7 +37,7 @@
 			</div>
 
 			<div class="projects__button">
-				<a href="" class="button-default">Смотреть все</a>
+				<a href="" class="button-default button-default--sm-mobile">Смотреть все</a>
 			</div>
 		</div>
 	</div>

@@ -1,24 +1,50 @@
 <section id="experience" class="exp">
   <div class="container">
-    <div class="exp__inner">
-      <h2 class="title">
-        <span>Опыт работы</span>
-      </h2>
+    <div class="exp__inner section-caption">
+      <span class="background-text">И другие</span>
 
-      <div class="exp__wrapper">
-        <div class="exp__item no-counter">
+      <div class="title-wrapper">
+        <a href="" class="title-link">
+          <svg width="24" height="24" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.75 4C0.75 3.30964 1.30964 2.75 2 2.75H22C22.6904 2.75 23.25 3.30964 23.25 4C23.25 4.69036 22.6904 5.25 22 5.25H2C1.30964 5.25 0.75 4.69036 0.75 4Z"
+              fill="#353535" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.11612 3.11612C1.60427 2.62796 2.39573 2.62796 2.88388 3.11612L5.38388 5.61612C5.87204 6.10427 5.87204 6.89573 5.38388 7.38388C4.89573 7.87204 4.10427 7.87204 3.61612 7.38388L1.11612 4.88388C0.62796 4.39573 0.62796 3.60427 1.11612 3.11612Z"
+              fill="#353535" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.11612 4.88388C1.60427 5.37204 2.39573 5.37204 2.88388 4.88388L5.38388 2.38388C5.87204 1.89573 5.87204 1.10427 5.38388 0.616117C4.89573 0.127961 4.10427 0.127961 3.61612 0.616116L1.11612 3.11612C0.62796 3.60427 0.62796 4.39573 1.11612 4.88388Z"
+              fill="#353535" />
+          </svg>
+        </a>
+
+        <h2 class="title">
+          <hr>
+          <span>Опыт работы</span>
+          <hr>
+        </h2>
+      </div>
+
+      <div class="exp__wrapper" style="counter-reset: number 12">
+        <div class="exp__item">
           <div class="exp__item_meta">
             <span class="exp__item_meta--title">
               UX/UI-дизайнер
             </span>
-            <span class="exp__item_meta--company"
-              >Сбербанк IT</span
-            >
-            <span class="exp__item_meta--duration"
-              >Ноябрь 2022 — По наст. вр.</span
-            >
+            <span class="exp__item_meta--company">
+              Сбербанк IT
+            </span>
+            <span class="exp__item_meta--duration">
+              Ноябрь 2022 — По наст. вр.
+            </span>
+            <div class="exp__item_button gradient-link-wrapper">
+              <button @click="openPopup('sber')" type="button"
+                class="button-default button-default--white button-default--white-alt button-default--sm">
+                Подробнее
+              </button>
+            </div>
           </div>
-		  <div class="wave"></div>
+          <div class="wave"></div>
         </div>
 
         <div class="exp__item">
@@ -42,11 +68,7 @@
               </li>
               <li>участие в создании общего UI-Kit;</li>
             </ul>
-            <button
-              @click="openPopup('rossbank')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('rossbank')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
@@ -55,12 +77,8 @@
             <span class="exp__item_meta--title">
               Mobile Lead UX/UI Designer
             </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Россельхозбанк</span
-            >
-            <span class="exp__item_meta--duration"
-              >Июнь 2021 — по настоящее время</span
-            >
+            <span class="exp__item_meta--company gradient-text">Россельхозбанк</span>
+            <span class="exp__item_meta--duration">Июнь 2021 — по настоящее время</span>
           </div>
         </div>
 
@@ -85,23 +103,15 @@
               </li>
               <li>участие в создании общего UI-Kit;</li>
             </ul>
-            <button
-              @click="openPopup('papajohns')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('papajohns')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> Lead UX/UI-дизайнер </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Папа Джонс</span
-            >
-            <span class="exp__item_meta--duration"
-              >Май 2020 — по настоящее время</span
-            >
+            <span class="exp__item_meta--company gradient-text">Папа Джонс</span>
+            <span class="exp__item_meta--duration">Май 2020 — по настоящее время</span>
           </div>
         </div>
 
@@ -123,9 +133,7 @@
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> UX/UI-дизайнер </span>
             <span class="exp__item_meta--company gradient-text">Кибер-Ром</span>
-            <span class="exp__item_meta--duration"
-              >Июнь 2022 — Октябрь 2022</span
-            >
+            <span class="exp__item_meta--duration">Июнь 2022 — Октябрь 2022</span>
           </div>
         </div>
 
@@ -152,11 +160,7 @@
               </li>
               <li>Визуализация макетов:</li>
             </ul>
-            <button
-              @click="openPopup('psih')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('psih')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
@@ -192,23 +196,15 @@
                 в) планшета.
               </li>
             </ul>
-            <button
-              @click="openPopup('animedia')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('animedia')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> Проектная работа </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Animedia.TV</span
-            >
-            <span class="exp__item_meta--duration"
-              >Март 2020 — Апрель 2020</span
-            >
+            <span class="exp__item_meta--company gradient-text">Animedia.TV</span>
+            <span class="exp__item_meta--duration">Март 2020 — Апрель 2020</span>
           </div>
         </div>
 
@@ -234,23 +230,15 @@
                 а) личного бренда (брендбук, лого и т.д.);
               </li>
             </ul>
-            <button
-              @click="openPopup('bodystyle')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('bodystyle')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> Проектная работа </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Body Style</span
-            >
-            <span class="exp__item_meta--duration"
-              >Февраль 2020 — Март 2020</span
-            >
+            <span class="exp__item_meta--company gradient-text">Body Style</span>
+            <span class="exp__item_meta--duration">Февраль 2020 — Март 2020</span>
           </div>
         </div>
 
@@ -269,23 +257,15 @@
               <li>Составление и презентация проектов;</li>
               <li>Создание баннеров, лого/эмблем.</li>
             </ul>
-            <button
-              @click="openPopup('digitalagency')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('digitalagency')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> UX/UI-дизайнер </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Digital Agency AG</span
-            >
-            <span class="exp__item_meta--duration"
-              >Сентябрь 2019 — Март 2020</span
-            >
+            <span class="exp__item_meta--company gradient-text">Digital Agency AG</span>
+            <span class="exp__item_meta--duration">Сентябрь 2019 — Март 2020</span>
           </div>
         </div>
 
@@ -313,23 +293,15 @@
                 в) планшета.
               </li>
             </ul>
-            <button
-              @click="openPopup('decor')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('decor')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
           <div class="exp__item_counter"></div>
           <div class="exp__item_meta">
             <span class="exp__item_meta--title"> Проектная работа </span>
-            <span class="exp__item_meta--company gradient-text"
-              >Декор-Центр</span
-            >
-            <span class="exp__item_meta--duration"
-              >Июль 2019 — Август 2019</span
-            >
+            <span class="exp__item_meta--company gradient-text">Декор-Центр</span>
+            <span class="exp__item_meta--duration">Июль 2019 — Август 2019</span>
           </div>
         </div>
 
@@ -357,11 +329,7 @@
                 в) планшета.
               </li>
             </ul>
-            <button
-              @click="openPopup('shoes')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('shoes')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>
@@ -397,11 +365,7 @@
                 в) планшета.
               </li>
             </ul>
-            <button
-              @click="openPopup('pvoid')"
-              type="button"
-              class="exp__item_button"
-            >
+            <button @click="openPopup('pvoid')" type="button" class="exp__item_button gradient-link">
               Подробнее →
             </button>
           </div>

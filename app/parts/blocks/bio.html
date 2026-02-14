@@ -2,38 +2,28 @@
 	<div class="container">
 		<div class="bio__inner">
 			<h2 class="title">
+				<hr>
 				<span>Обо мне</span>
+				<hr>
 			</h2>
 
 			<div class="bio__wrapper">
 				<div class="bio__img">
-					<img decoding="async" src="images/dist/bio.png" width="493" height="662" alt="Фото" />
+					<img decoding="async" src="images/dist/bio.jpg" width="493" height="478" alt="Фото" />
 				</div>
 
 				<div class="bio__content">
 					<div class="bio__tabs">
-						<button
-							type="button"
-							class="bio__tabs_item"
-							:class="{'active' : bioTab == 'exp'}"
-							@click="selectTab('exp')"
-						>
+						<button type="button" class="bio__tabs_item" :class="{'active' : bioTab == 'exp'}"
+							@click="selectTab('exp')">
 							Опыт
 						</button>
-						<button
-							type="button"
-							class="bio__tabs_item"
-							:class="{'active' : bioTab == 'approach'}"
-							@click="selectTab('approach')"
-						>
+						<button type="button" class="bio__tabs_item" :class="{'active' : bioTab == 'approach'}"
+							@click="selectTab('approach')">
 							Подход
 						</button>
-						<button
-							type="button"
-							class="bio__tabs_item"
-							:class="{'active' : bioTab == 'bio'}"
-							@click="selectTab('bio')"
-						>
+						<button type="button" class="bio__tabs_item" :class="{'active' : bioTab == 'bio'}"
+							@click="selectTab('bio')">
 							Био
 						</button>
 					</div>
@@ -53,48 +43,50 @@
 							</p>
 						</div>
 
-						<div class="bio__meta">
-							<div class="bio__meta_item">
-								<span class="gradient-text">Figma</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe Photoshop</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe Illustrator</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Cinema 4D</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Maya</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe After Effects</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe XD</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe Premiere Pro</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe Lightroom</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Adobe Audition</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Sony Vegas</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Tilda</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Readymag</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">и другие</span>
+						<div class="bio__meta swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Figma</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe Photoshop</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe Illustrator</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Cinema 4D</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Maya</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe After Effects</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe XD</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe Premiere Pro</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe Lightroom</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Adobe Audition</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Sony Vegas</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Tilda</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Readymag</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">и другие</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -114,42 +106,44 @@
 							</p>
 						</div>
 
-						<div class="bio__meta">
-							<div class="bio__meta_item">
-								<span class="gradient-text">Ответственность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Дисциплинированность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Объективность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Трудолюбие</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Целеустремленность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Инициативность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Стрессоустойчивость</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Доверие</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Самостоятельность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Внимательность</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Отзывчивость</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Любознательность</span>
+						<div class="bio__meta swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Ответственность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Дисциплинированность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Объективность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Трудолюбие</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Целеустремленность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Инициативность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Стрессоустойчивость</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Доверие</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Самостоятельность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Внимательность</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Отзывчивость</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Любознательность</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -169,30 +163,32 @@
 							</p>
 						</div>
 
-						<div class="bio__meta bio__meta--grid">
-							<div class="bio__meta_item">
-								<span class="gradient-text">Возраст:</span>
-								<span>22 года</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Национальность:</span>
-								<span>Русский</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Пол:</span>
-								<span>Мужской</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Адрес:</span>
-								<span>Москва, Россия</span>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Телефон:</span>
-								<a href="tel:+79328413990">+7 (932) 84-139-90</a>
-							</div>
-							<div class="bio__meta_item">
-								<span class="gradient-text">Почта:</span>
-								<a href="mailto:begma00@mail.ru">begma00@mail.ru</a>
+						<div class="bio__meta swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Возраст:</span>
+									<span>22 года</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Национальность:</span>
+									<span>Русский</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Пол:</span>
+									<span>Мужской</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Адрес:</span>
+									<span>Москва, Россия</span>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Телефон:</span>
+									<a href="tel:+79328413990">+7 (932) 84-139-90</a>
+								</div>
+								<div class="swiper-slide bio__meta_item">
+									<span class="gradient-text">Почта:</span>
+									<a href="mailto:begma00@mail.ru">begma00@mail.ru</a>
+								</div>
 							</div>
 						</div>
 					</div>

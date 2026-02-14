@@ -1,76 +1,173 @@
 .specs {
-	&__inner {
-		padding-top: 100px;
-		padding-bottom: 60px;
-	}
+  position: relative;
+  background-color: $white;
+  border-radius: 64px;
 
-	&__wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 30px;
-	}
+  &__inner {
+    padding: 100px 0;
+  }
 
-	&__item {
-		display: flex;
-		flex-direction: column;
-		border: 1px solid transparent;
-		background: linear-gradient(to right, white, white), $gradient;
-		background-origin: padding-box, border-box;
-		background-clip: padding-box, border-box;
-		background-repeat: no-repeat;
-		z-index: 1;
-		border-radius: 22px;
+  &__wrapper {
+    &:not(:has(.swiper-initialized)) .swiper-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+    }
 
-		&_img {
-			& video {
-				border-radius: 22px;
-				width: 100%;
-				background: $gradient;
-			}
-		}
+    & .swiper-wrapper {
+      padding: 1px 0;
+    }
+  }
 
-		&_info {
-			padding: 35px;
-			padding-bottom: 0;
-			margin-bottom: 35px;
-			color: $black;
-			letter-spacing: 0.04em;
-		}
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    background: linear-gradient(to right, white, white), $gradient;
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 32px;
+    height: auto;
 
-		&_title {
-			text-align: center;
-			font-size: 24px;
-			margin-bottom: 25px;
-		}
+    &_img {
+      display: flex;
 
-		&_desc {
-			font-size: 18px;
-		}
+      & video,
+      & img {
+        border-radius: 32px;
+        width: 100%;
+        background: $gradient;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+    }
 
-		&_button {
-			margin-top: auto;
-			text-align: center;
-			padding-bottom: 35px;
-		}
-	}
+    &_info {
+      padding: 32px;
+      padding-bottom: 0;
+      margin-bottom: 32px;
+      color: $black;
+      letter-spacing: 0.04em;
+    }
+
+    &_title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    &_desc {
+      font-size: 18px;
+      display: -webkit-box;
+      line-clamp: 12;
+      -webkit-line-clamp: 12;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &_button {
+      margin-top: auto;
+      text-align: center;
+      padding: 32px;
+      padding-top: 0;
+
+      & .button-default {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1500px) {
-	.specs {
-		&__item {
-			&_info {
-				padding: 25px;
-				padding-bottom: 0;
-				margin-bottom: 15px;
-			}
+  .specs {
+    &__item {
+      &_info {
+        padding: 24px;
+        padding-bottom: 0;
+        margin-bottom: 16px;
+      }
 
-			&_desc {
-				font-size: 16px;
-			}
+      &_button {
+        padding-bottom: 24px;
+      }
 
-			&_button {
-				padding-bottom: 25px;
-			}
-		}
-	}
+      &_img {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1048px) {
+  .specs {
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .specs {
+    &__inner {
+      padding: 32px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .specs {
+    & .container {
+      padding: 0;
+    }
+
+    & .title {
+      padding: 0 16px;
+    }
+
+    &__item {
+      max-width: calc(100vw - 55px);
+      border-radius: 24px;
+
+      &_info {
+        padding: 24px 16px;
+        margin-bottom: 0;
+      }
+
+      &_button {
+        padding-inline: 16px;
+      }
+
+      &_title {
+        margin-bottom: 8px;
+        font-size: 20px;
+      }
+
+      &_img {
+        & video,
+        & img {
+          border-radius: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .specs {
+    &__item {
+      &_img {
+        & video,
+        & img {
+          aspect-ratio: 21 / 13;
+        }
+      }
+
+      &_desc {
+        line-clamp: 8;
+        -webkit-line-clamp: 8;
+      }
+    }
+  }
 }

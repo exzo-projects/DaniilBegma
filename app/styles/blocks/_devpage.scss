@@ -1,45 +1,39 @@
 .devpage {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: $black;
-	background-image: url("../images/desktop-anim.gif");
-	background-position: center;
-	width: 100vw;
-	height: calc((var(--vh, 1vh) * 100));
-	max-height: calc((var(--vh, 1vh) * 100));
-	display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $black;
+  background-image: url("../images/desktop-anim.gif");
+  background-position: center;
+  width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  display: flex;
 
-	& .container {
-		padding-top: 100px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  & .container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	&__title {
-		font-family: "Playfair", serif;
-		font-size: 100px;
-		font-weight: 700;
-		text-transform: uppercase;
-		color: $white;
-		line-height: 1.1;
-		text-shadow: 0px 0px 15px $black;
-		text-align: center;
-	}
+  &__title {
+    font-family: "Playfair", serif;
+    font-size: clamp(42px, 8vw, 100px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 1.1;
+    text-shadow: 0px 0px 15px $black;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 1380px) {
-	.devpage {
-		&__title {
-			font-size: 80px;
-		}
-	}
-}
+@media screen and (max-width: 968px) {
+  .devpage {
+    background-position: right;
 
-@media screen and (max-width: 1100px) {
-	.devpage {
-		&__title {
-			font-size: 60px;
+		& .container {
+			padding-top: 50px;
 		}
-	}
+  }
 }

@@ -3,7 +3,10 @@
 
 	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'contacts'" class="popup popup-contacts">
 		<div class="popup-contacts__inner">
-			<div class="popup-contacts__img">
+			<div class="popup-contacts__header">
+				<video class="popup-contacts__background" src="images/bg-modal.mp4" preload="auto" playsinline muted loop
+					autoplay></video>
+
 				<div class="popup-contacts__socials">
 					<a href="" target="_blank"><img src="images/dist/vk-icon.svg" width="20" height="12" alt="" /></a>
 					<a href="" target="_blank"><img src="images/dist/inst-icon.svg" width="16" height="16" alt="" /></a>
@@ -11,18 +14,15 @@
 				</div>
 			</div>
 			<div class="popup-contacts__wrapper">
-				<div class="title">
+				<h2 class="title">
+					<hr>
 					<span>Контакты</span>
-				</div>
+					<hr>
+				</h2>
 
-				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
-					<input
-						class="popup__input"
-						type="text"
-						name="fio"
-						placeholder="Представьтесь (ФИО / Компания)"
-						required
-					/>
+				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST"
+					class="popup-contacts__form">
+					<input class="popup__input" type="text" name="fio" placeholder="Представьтесь (ФИО / Компания)" required />
 					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
 					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>

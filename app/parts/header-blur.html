@@ -1,171 +1,171 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Daniil Begma</title>
-		<meta name="description" content="description" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<link rel="preload" href="js/alpine.js" as="script" />
-		<link rel="preload" href="js/swiper.js" as="script" />
-		<link rel="preload" href="./fonts/FuturaPT-Medium.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="./fonts/FuturaPT-Demi.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="./fonts/PlayfairDisplay-SemiBold.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="./fonts/PlayfairDisplay-Bold.woff2" as="font" crossorigin="anonymous" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
 
-		<link rel="icon" href="images/favicon.png" />
+<head>
+	<meta charset="utf-8" />
+	<title>Daniil Begma</title>
+	<meta name="description" content="description" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="preload" href="js/alpine.js" as="script" />
+	<link rel="preload" href="js/swiper.js" as="script" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="css/main.min.css" />
-	</head>
-	<body x-data="app()">
-		<header class="header header-center header-blur">
-			<div class="container">
-				<div class="header__inner">
-					<a href="" class="header__logo">
-						<svg
-							width="190"
-							height="20"
-							viewBox="0 0 190 20"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M105.596 9.57195C107.459 8.59264 108.391 7.11841 108.391 5.14927C108.409 4.53094 108.302 3.91552 108.077 3.34077C107.852 2.76603 107.514 2.24409 107.084 1.80699C105.933 0.633924 104.234 0.0484367 101.987 0.0505428H100.348V3.13695H101.534C102.627 3.13695 103.472 3.36124 104.065 3.80351C104.354 4.01262 104.586 4.29179 104.742 4.61563C104.898 4.93947 104.971 5.29772 104.956 5.65787C104.979 6.05759 104.9 6.45649 104.727 6.81614C104.554 7.17579 104.293 7.48406 103.969 7.71126C103.31 8.17564 102.416 8.40626 101.282 8.40626H100.351V11.3505H102.037C104.712 11.3505 106.048 12.2382 106.046 14.0136C106.068 14.4149 105.988 14.8152 105.816 15.1767C105.643 15.5382 105.382 15.8489 105.059 16.0796C104.397 16.5535 103.475 16.7872 102.289 16.7872H100.348V19.8768H102.258C104.467 19.8768 106.22 19.404 107.518 18.4584C108.817 17.5128 109.467 16.1723 109.469 14.4369C109.469 12.0908 108.178 10.4691 105.596 9.57195Z"
-								fill="#FFFFFF"
-							/>
-							<path d="M123.658 0.12323H112.888V3.36758H123.658V0.12323Z" fill="#FFFFFF" />
-							<path d="M122.308 8.27039H116.162V11.5369H122.308V8.27039Z" fill="#FFFFFF" />
-							<path d="M123.721 16.6703H112.808V19.9147H123.721V16.6703Z" fill="#FFFFFF" />
-							<path d="M142.003 8.27991H137.397V11.5243H142.003V8.27991Z" fill="#FFFFFF" />
-							<path
-								d="M142.003 15.6373C140.705 16.4534 139.203 16.8703 137.677 16.8378C135.708 16.8378 134.112 16.1923 132.888 14.9013C131.665 13.6103 131.052 11.9676 131.05 9.97314C131.015 8.18182 131.669 6.44734 132.873 5.13979C133.437 4.4966 134.131 3.98451 134.906 3.63837C135.682 3.29222 136.523 3.12012 137.37 3.13378C138.39 3.1079 139.407 3.28053 140.364 3.6424C140.941 3.8879 141.491 4.19612 142.003 4.56168V0.805558C141.898 0.761331 141.792 0.717106 141.693 0.679197C140.349 0.216044 138.935 -0.00316542 137.516 0.0315845C134.617 0.0315845 132.218 1.00247 130.317 2.94424C129.396 3.85639 128.668 4.95041 128.178 6.15913C127.688 7.36785 127.445 8.66575 127.466 9.97314C127.466 12.8479 128.398 15.2224 130.261 17.0968C132.124 18.9712 134.56 19.9094 137.569 19.9115C139.082 19.9207 140.586 19.6532 142.006 19.1218L142.003 15.6373Z"
-								fill="#FFFFFF"
-							/>
-							<path d="M165.525 16.6419H162.338V19.8863H165.525V16.6419Z" fill="#FFFFFF" />
-							<path d="M149.978 16.6419H146.786V19.8863H149.978V16.6419Z" fill="#FFFFFF" />
-							<path
-								d="M162.345 13.4007H165.531V0.069519H162.124L156.193 9.44561L150.264 0.069519H146.792V13.4007H149.985V5.73371L156.081 15.0245H156.193L162.345 5.68001V13.4007Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M177.817 8.27987L179.783 4.11939L181.767 8.27987H185.034L181.426 0.034729H178.252L174.646 8.27987H177.817Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M186.305 11.54H183.152H176.441H173.373L169.677 20H173.183L175.314 14.5727H184.249L186.382 20H190L186.305 11.54Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M26.9035 8.46312L28.86 4.19523L30.8321 8.46312H34.0836L30.4936 0H27.3352L23.7451 8.46312H26.9035Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M35.3511 11.7833H32.2145H25.5344H22.4785L18.7983 19.8452H22.2921L24.4132 14.8823H33.3014L35.4288 19.8452H39.0313L35.3511 11.7833Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M82.8013 19.8673V0.120056H86.0311V16.8125H89.3541V19.8673H82.8013Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M50.1118 4.98186L46.4131 0.12323H43.3013V19.9053H46.6025V5.87272L50.1118 10.4723V4.98186Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M56.649 0.12323V13.704L53.2856 9.24027V14.6517L57.1397 19.7631H59.9533V0.12323H56.649Z"
-								fill="#FFFFFF"
-							/>
-							<path d="M68.2113 6.64032H65.0591V19.7725H68.2113V6.64032Z" fill="#FFFFFF" />
-							<path d="M68.2113 0.110596H65.0591V3.37706H68.2113V0.110596Z" fill="#FFFFFF" />
-							<path d="M77.5001 0.0663452H74.3262V6.26126H77.5001V0.0663452Z" fill="#FFFFFF" />
-							<path d="M77.5001 11.5558H74.3262V19.8421H77.5001V11.5558Z" fill="#FFFFFF" />
-							<path
-								d="M75.8663 10.5765C76.7427 10.5765 77.4532 9.83965 77.4532 8.93066C77.4532 8.02167 76.7427 7.28479 75.8663 7.28479C74.9898 7.28479 74.2793 8.02167 74.2793 8.93066C74.2793 9.83965 74.9898 10.5765 75.8663 10.5765Z"
-								fill="#FFFFFF"
-							/>
-							<path
-								d="M13.913 2.88739C12.0331 1.02566 9.60973 0.0947876 6.64286 0.0947876H0V5.34514H3.17391V3.25385H6.64286C8.61594 3.25385 10.2081 3.88566 11.4193 5.14928C12.6304 6.4129 13.236 8.0156 13.236 9.95737C13.236 11.9265 12.6304 13.5334 11.4193 14.7781C10.2081 16.0228 8.61594 16.6461 6.64286 16.6483H3.17391V15.0687H0V19.8073H6.64286C9.5911 19.8073 12.0103 18.8701 13.9006 16.9958C15.7909 15.1214 16.736 12.7784 16.736 9.96685C16.736 7.11316 15.795 4.75334 13.913 2.88739Z"
-								fill="#FFFFFF"
-							/>
-							<path d="M3.18012 8.44733H0V11.7454H3.18012V8.44733Z" fill="#FFFFFF" />
+	<link rel="icon" href="images/favicon.png" />
 
-							<defs>
-								<linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse">
-									<stop offset="0%" stop-color="#FFFFFF" />
-									<stop offset="100%" stop-color="#FFFFFF" />
-								</linearGradient>
-							</defs>
-						</svg>
-					</a>
+	<link rel="stylesheet" href="css/main.min.css" />
+</head>
 
-					<div class="header__burger_wrapper">
+<body x-data="app()" x-init="preloader()" @keydown.escape.window="popup = null">
+	<div class="preloader">
+		<div class="preloader__inner">
+			<div class="preloader__logo">
+				<video src="images/preloader.mp4" playsinline autoplay muted preload="auto"></video>
+			</div>
+
+			<div class="preloader__anim">
+				<img class="preloader__anim_top" src="images/dist/wave2.svg" alt="">
+				<img class="preloader__anim_bottom" src="images/dist/wave1.svg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<header class="header header-blur header-center">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__burger_wrapper">
 					<button type="button" class="header__burger" @click="toggleNav">
-						<svg
-							class="header-burger"
-							width="27"
-							height="18"
-							viewBox="0 0 27 18"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path d="M13.5 18H0V15H13.5V18ZM27 10.5H0V7.5H27V10.5ZM27 3H13.5V0H27V3Z" fill="#FFFFFF" />
+						<svg class="header-burger" width="27" height="18" viewBox="0 0 27 18" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.5 18H0V15H13.5V18ZM27 10.5H0V7.5H27V10.5ZM27 3H13.5V0H27V3Z" fill="#353535" />
 							<defs>
 								<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
-									<stop offset="0%" stop-color="#FFFFFF" />
-									<stop offset="100%" stop-color="#FFFFFF" />
+									<stop offset="0%" stop-color="#353535" />
+									<stop offset="100%" stop-color="#353535" />
 								</linearGradient>
 							</defs>
 						</svg>
 
-						<svg
-							class="header-close"
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
+						<svg class="header-close" width="20" height="20" viewBox="0 0 20 20" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M20 2.47152L17.5285 0L10 7.52848L2.47152 0L0 2.47152L7.52848 10L0 17.5285L2.47152 20L10 12.4715L17.5285 20L20 17.5285L12.4715 10L20 2.47152Z"
-								fill="#FFFFFF"
-							/>
+								fill="#353535" />
 							<defs>
 								<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
-									<stop offset="0%" stop-color="#FFFFFF" />
-									<stop offset="100%" stop-color="#FFFFFF" />
+									<stop offset="0%" stop-color="#353535" />
+									<stop offset="100%" stop-color="#353535" />
 								</linearGradient>
 							</defs>
 						</svg>
 					</button>
 				</div>
 
-					<div class="header__block">
-						<div class="header__lang">
-							<a href="" class="header__lang_link">EN</a>
-							<span class="header__lang_sep"> | </span>
-							<a href="" class="header__lang_link active">RU</a>
-						</div>
+				<a href="" class="header__logo">
+					<svg width="190" height="20" viewBox="0 0 190 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M105.596 9.57195C107.459 8.59264 108.391 7.11841 108.391 5.14927C108.409 4.53094 108.302 3.91552 108.077 3.34077C107.852 2.76603 107.514 2.24409 107.084 1.80699C105.933 0.633924 104.234 0.0484367 101.987 0.0505428H100.348V3.13695H101.534C102.627 3.13695 103.472 3.36124 104.065 3.80351C104.354 4.01262 104.586 4.29179 104.742 4.61563C104.898 4.93947 104.971 5.29772 104.956 5.65787C104.979 6.05759 104.9 6.45649 104.727 6.81614C104.554 7.17579 104.293 7.48406 103.969 7.71126C103.31 8.17564 102.416 8.40626 101.282 8.40626H100.351V11.3505H102.037C104.712 11.3505 106.048 12.2382 106.046 14.0136C106.068 14.4149 105.988 14.8152 105.816 15.1767C105.643 15.5382 105.382 15.8489 105.059 16.0796C104.397 16.5535 103.475 16.7872 102.289 16.7872H100.348V19.8768H102.258C104.467 19.8768 106.22 19.404 107.518 18.4584C108.817 17.5128 109.467 16.1723 109.469 14.4369C109.469 12.0908 108.178 10.4691 105.596 9.57195Z"
+							fill="#353535" />
+						<path d="M123.658 0.12323H112.888V3.36758H123.658V0.12323Z" fill="#353535" />
+						<path d="M122.308 8.27039H116.162V11.5369H122.308V8.27039Z" fill="#353535" />
+						<path d="M123.721 16.6703H112.808V19.9147H123.721V16.6703Z" fill="#353535" />
+						<path d="M142.003 8.27991H137.397V11.5243H142.003V8.27991Z" fill="#353535" />
+						<path
+							d="M142.003 15.6373C140.705 16.4534 139.203 16.8703 137.677 16.8378C135.708 16.8378 134.112 16.1923 132.888 14.9013C131.665 13.6103 131.052 11.9676 131.05 9.97314C131.015 8.18182 131.669 6.44734 132.873 5.13979C133.437 4.4966 134.131 3.98451 134.906 3.63837C135.682 3.29222 136.523 3.12012 137.37 3.13378C138.39 3.1079 139.407 3.28053 140.364 3.6424C140.941 3.8879 141.491 4.19612 142.003 4.56168V0.805558C141.898 0.761331 141.792 0.717106 141.693 0.679197C140.349 0.216044 138.935 -0.00316542 137.516 0.0315845C134.617 0.0315845 132.218 1.00247 130.317 2.94424C129.396 3.85639 128.668 4.95041 128.178 6.15913C127.688 7.36785 127.445 8.66575 127.466 9.97314C127.466 12.8479 128.398 15.2224 130.261 17.0968C132.124 18.9712 134.56 19.9094 137.569 19.9115C139.082 19.9207 140.586 19.6532 142.006 19.1218L142.003 15.6373Z"
+							fill="#353535" />
+						<path d="M165.525 16.6419H162.338V19.8863H165.525V16.6419Z" fill="#353535" />
+						<path d="M149.978 16.6419H146.786V19.8863H149.978V16.6419Z" fill="#353535" />
+						<path
+							d="M162.345 13.4007H165.531V0.069519H162.124L156.193 9.44561L150.264 0.069519H146.792V13.4007H149.985V5.73371L156.081 15.0245H156.193L162.345 5.68001V13.4007Z"
+							fill="#353535" />
+						<path
+							d="M177.817 8.27987L179.783 4.11939L181.767 8.27987H185.034L181.426 0.034729H178.252L174.646 8.27987H177.817Z"
+							fill="#353535" />
+						<path
+							d="M186.305 11.54H183.152H176.441H173.373L169.677 20H173.183L175.314 14.5727H184.249L186.382 20H190L186.305 11.54Z"
+							fill="#353535" />
+						<path d="M26.9035 8.46312L28.86 4.19523L30.8321 8.46312H34.0836L30.4936 0H27.3352L23.7451 8.46312H26.9035Z"
+							fill="#353535" />
+						<path
+							d="M35.3511 11.7833H32.2145H25.5344H22.4785L18.7983 19.8452H22.2921L24.4132 14.8823H33.3014L35.4288 19.8452H39.0313L35.3511 11.7833Z"
+							fill="#353535" />
+						<path d="M82.8013 19.8673V0.120056H86.0311V16.8125H89.3541V19.8673H82.8013Z" fill="#353535" />
+						<path d="M50.1118 4.98186L46.4131 0.12323H43.3013V19.9053H46.6025V5.87272L50.1118 10.4723V4.98186Z"
+							fill="#353535" />
+						<path d="M56.649 0.12323V13.704L53.2856 9.24027V14.6517L57.1397 19.7631H59.9533V0.12323H56.649Z"
+							fill="#353535" />
+						<path d="M68.2113 6.64032H65.0591V19.7725H68.2113V6.64032Z" fill="#353535" />
+						<path d="M68.2113 0.110596H65.0591V3.37706H68.2113V0.110596Z" fill="#353535" />
+						<path d="M77.5001 0.0663452H74.3262V6.26126H77.5001V0.0663452Z" fill="#353535" />
+						<path d="M77.5001 11.5558H74.3262V19.8421H77.5001V11.5558Z" fill="#353535" />
+						<path
+							d="M75.8663 10.5765C76.7427 10.5765 77.4532 9.83965 77.4532 8.93066C77.4532 8.02167 76.7427 7.28479 75.8663 7.28479C74.9898 7.28479 74.2793 8.02167 74.2793 8.93066C74.2793 9.83965 74.9898 10.5765 75.8663 10.5765Z"
+							fill="#353535" />
+						<path
+							d="M13.913 2.88739C12.0331 1.02566 9.60973 0.0947876 6.64286 0.0947876H0V5.34514H3.17391V3.25385H6.64286C8.61594 3.25385 10.2081 3.88566 11.4193 5.14928C12.6304 6.4129 13.236 8.0156 13.236 9.95737C13.236 11.9265 12.6304 13.5334 11.4193 14.7781C10.2081 16.0228 8.61594 16.6461 6.64286 16.6483H3.17391V15.0687H0V19.8073H6.64286C9.5911 19.8073 12.0103 18.8701 13.9006 16.9958C15.7909 15.1214 16.736 12.7784 16.736 9.96685C16.736 7.11316 15.795 4.75334 13.913 2.88739Z"
+							fill="#353535" />
+						<path d="M3.18012 8.44733H0V11.7454H3.18012V8.44733Z" fill="#353535" />
 
-						<div class="header__hire">
-							<button type="button" class="button-default" @click="openPopup('contacts')">
-								Нанять меня
-							</button>
-						</div>
+						<defs>
+							<linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse">
+								<stop offset="0%" stop-color="#353535" />
+								<stop offset="100%" stop-color="#353535" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+
+				<div class="header__block">
+					<div class="header__lang">
+						<a href="" class="header__lang_link">EN</a>
+						<span class="header__lang_sep"> | </span>
+						<a href="" class="header__lang_link active">RU</a>
 					</div>
 
-					<nav x-cloak x-show.transition.opacity="nav == true" class="header__nav">
-						<a href="" class="header__nav_link">Главная</a>
-						<a href="" class="header__nav_link">Обо мне</a>
-						<a href="" class="header__nav_link">Проекты</a>
-						<div class="header__nav_link empty"></div>
-						<a href="" class="header__nav_link">Компании</a>
-						<a href="" class="header__nav_link">Навыки</a>
-						<a href="" class="header__nav_link">Опыт</a>
-						<a href="" class="header__nav_link">Отзывы</a>
-					</nav>
+					<div class="header__hire">
+						<button type="button" class="button-default" @click="openPopup('contacts')">Нанять меня</button>
+					</div>
+				</div>
+
+				<nav x-cloak x-show.transition.opacity="nav" class="header__nav">
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
+					<div class="header__nav_link empty"></div>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('specs')">Навыки</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('experience')">Опыт</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('reviews')">Отзывы</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- noindex -->
+		<div x-cloak class="header-menu" :class="{'header-menu--active': nav}">
+			<div class="header-menu__inner">
+				<nav class="header__nav">
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
+					<div class="header__nav_link empty"></div>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('specs')">Навыки</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('experience')">Опыт</a>
+					<a href="" class="header__nav_link" @click.prevent="scrollToElem('reviews')">Отзывы</a>
+				</nav>
+
+				<div class="header__lang">
+					<a href="" class="header__lang_link">EN</a>
+					<span class="header__lang_sep"> | </span>
+					<a href="" class="header__lang_link active">RU</a>
 				</div>
 			</div>
-		</header>
+		</div>
+
+		<div x-cloak class="notifications" @click="hideNotification(event.target)">
+			<div class="notifications__item">Сообщение отправлено! Спасибо :3</div>
+			<div class="notifications__item">Скоро отвечу Вам 😇</div>
+			<div class="notifications__item">Хорошего дня)</div>
+		</div>
+		<!-- /noindex -->
+	</header>

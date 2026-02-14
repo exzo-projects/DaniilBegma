@@ -1,0 +1,41 @@
+.header-maintenance {
+  & .header {
+    &__block {
+      margin-left: auto;
+      display: flex !important;
+    }
+  }
+}
+
+.maintenance {
+  &__button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-maintenance {
+    & .header {
+      &__hire {
+        display: none;
+      }
+
+      &__lang {
+        bottom: auto;
+        top: calc(100% + 8px);
+        background: rgba(96, 96, 96, 0.3) !important;
+        backdrop-filter: blur(6px);
+      }
+    }
+  }
+
+  .maintenance {
+    &__button {
+      display: block;
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+    }
+  }
+}

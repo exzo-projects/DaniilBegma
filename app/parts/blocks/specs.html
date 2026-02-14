@@ -1,83 +1,95 @@
-<section id="specs" class="specs">
+<section id="skills" class="specs">
 	<div class="container">
 		<div class="specs__inner">
 			<h2 class="title">
+				<hr>
 				<span>Навыки специализаций</span>
+				<hr>
 			</h2>
 
 			<div class="specs__wrapper">
-				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
-					<div class="specs__item_img">
-						<video src="images/card1.mp4" playsinline muted loop preload="auto"></video>
-					</div>
-					<div class="specs__item_info">
-						<h3 class="specs__item_title">Web-дизайн</h3>
+				<div class="swiper specs-container">
+					<div class="swiper-wrapper">
+						<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)"
+							class="swiper-slide specs__item">
+							<div class="specs__item_img">
+								<video src="images/card1.mp4" playsinline muted loop preload="auto"></video>
+							</div>
+							<div class="specs__item_info">
+								<h3 class="specs__item_title">Web-дизайн</h3>
 
-						<div class="specs__item_desc">
-							<p>1) брифинг с заказчиком (в живую и удаленно);</p>
-							<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
-							<p>3) отрисовка иконок;</p>
-							<p>4) редизайн сайтов;</p>
-							<p>5) адаптивный дизайн;</p>
-							<p>6) mobile first;</p>
-							<p>7) создание:</p>
-							<p>а) дизайн-концепций;</p>
-							<p>б) gif-анимаций;</p>
-							<p>...</p>
+								<div class="specs__item_desc">
+									<p>1) брифинг с заказчиком (в живую и удаленно);</p>
+									<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
+									<p>3) отрисовка иконок;</p>
+									<p>4) редизайн сайтов;</p>
+									<p>5) адаптивный дизайн;</p>
+									<p>6) mobile first;</p>
+									<p>7) создание:</p>
+									<p>а) дизайн-концепций;</p>
+									<p>б) gif-анимаций;</p>
+									<p>...</p>
+								</div>
+							</div>
+							<div class="specs__item_button">
+								<button @click="openPopup('spec1')" type="button"
+									class="button-default button-default--sm">Подробнее</button>
+							</div>
 						</div>
-					</div>
-					<div class="specs__item_button">
-						<button @click="openPopup('spec1')" type="button" class="button-default button-default--sm">Подробнее</button>
-					</div>
-				</div>
 
-				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
-					<div class="specs__item_img">
-						<video src="images/card2.mp4" playsinline muted loop preload="auto"></video>
-					</div>
-					<div class="specs__item_info">
-						<h3 class="specs__item_title">UX/UI-дизайн</h3>
+						<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)"
+							class="swiper-slide specs__item">
+							<div class="specs__item_img">
+								<video src="images/card2.mp4" playsinline muted loop preload="auto"></video>
+							</div>
+							<div class="specs__item_info">
+								<h3 class="specs__item_title">UX/UI-дизайн</h3>
 
-						<div class="specs__item_desc">
-							<p class="gradient-text">1) UX-исследование:</p>
-							<p>а) интервью (направленное и неориентированное);</p>
-							<p>б) аудит (дизайна, бизнеса (покупатель, продукт, компания, конкуренты);</p>
-							<p>в) стратегии и идеи;</p>
-							<p>г) аналитика (создание UP, CJM, UJM, EJM, Отчеты (Word, Excel)).</p>
-							<br /><br />
-							<p class="gradient-text">2) UX-проектирование:</p>
-							<p>...</p>
+								<div class="specs__item_desc">
+									<p class="gradient-text">1) UX-исследование:</p>
+									<p>а) интервью (направленное и неориентированное);</p>
+									<p>б) аудит (дизайна, бизнеса (покупатель, продукт, компания, конкуренты);</p>
+									<p>в) стратегии и идеи;</p>
+									<p>г) аналитика (создание UP, CJM, UJM, EJM, Отчеты (Word, Excel)).</p>
+									<br /><br />
+									<p class="gradient-text">2) UX-проектирование:</p>
+									<p>...</p>
+								</div>
+							</div>
+							<div class="specs__item_button">
+								<button @click="openPopup('spec2')" type="button"
+									class="button-default button-default--sm">Подробнее</button>
+							</div>
 						</div>
-					</div>
-					<div class="specs__item_button">
-						<button @click="openPopup('spec2')" type="button" class="button-default button-default--sm">Подробнее</button>
-					</div>
-				</div>
 
-				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
-					<div class="specs__item_img">
-						<video src="images/card3.mp4" playsinline muted loop preload="auto"></video>
-					</div>
+						<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)"
+							class="swiper-slide specs__item">
+							<div class="specs__item_img">
+								<video src="images/card3.mp4" playsinline muted loop preload="auto"></video>
+							</div>
 
-					<div class="specs__item_info">
-						<h3 class="specs__item_title">Прочие</h3>
+							<div class="specs__item_info">
+								<h3 class="specs__item_title">Прочие</h3>
 
-						<div class="specs__item_desc">
-							<p class="gradient-text">1) UI-анимация</p>
-							<p>а) сайты;</p>
-							<p>б) иконки;</p>
-							<p>в) прелоадеры;</p>
-							<p>г) микровзаимодействия.</p>
-							<br /><br />
-							<p class="gradient-text">2) 3D-моделирование:</p>
-							<p>а) Параметрическое;</p>
-							<p>б) Полигональное (Hard Surface)</p>
-							<p>...</p>
+								<div class="specs__item_desc">
+									<p class="gradient-text">1) UI-анимация</p>
+									<p>а) сайты;</p>
+									<p>б) иконки;</p>
+									<p>в) прелоадеры;</p>
+									<p>г) микровзаимодействия.</p>
+									<br /><br />
+									<p class="gradient-text">2) 3D-моделирование:</p>
+									<p>а) Параметрическое;</p>
+									<p>б) Полигональное (Hard Surface)</p>
+									<p>...</p>
+								</div>
+							</div>
+
+							<div class="specs__item_button">
+								<button @click="openPopup('spec3')" type="button"
+									class="button-default button-default--sm">Подробнее</button>
+							</div>
 						</div>
-					</div>
-
-					<div class="specs__item_button">
-						<button @click="openPopup('spec3')" type="button" class="button-default button-default--sm">Подробнее</button>
 					</div>
 				</div>
 			</div>
