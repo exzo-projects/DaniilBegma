@@ -6,6 +6,9 @@
 				<button @click="popup = null" class="popup__button-close" type="button" aria-label="Закрыть">
 					<img alt="Закрыть" decoding="async" width="16" height="16" src="images/dist/close-white.svg">
 				</button>
+				<button @click="popup = null" class="popup__button-close-mobile" type="button" aria-label="Закрыть">
+					<img alt="Закрыть" decoding="async" width="16" height="16" src="images/dist/input-clear.svg">
+				</button>
 
 				<div class="popup-contacts__header">
 					<video class="popup-contacts__background" src="images/bg-modal.mp4" preload="auto" playsinline muted loop
@@ -24,7 +27,7 @@
 
 						<div class="popup__label">
 							<input class="popup__input" type="text" name="fio" placeholder="Представьтесь" autocomplete="off" required
-								@focus="clearFieldError($event.target)" @blur="validateField($event.target)" />
+								@focus="clearFieldError($event.target); expandContactsPopup($event.target)" @blur="validateField($event.target); collapseContactsPopup($event.target)" />
 							<label>Представьтесь</label>
 							<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
 								<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">
@@ -35,7 +38,7 @@
 
 						<div class="popup__label">
 							<input class="popup__input" type="email" name="email" placeholder="E-mail" autocomplete="off" required
-								@focus="clearFieldError($event.target)" @blur="validateField($event.target)" />
+								@focus="clearFieldError($event.target); expandContactsPopup($event.target)" @blur="validateField($event.target); collapseContactsPopup($event.target)" />
 							<label>E-mail для обратной связи</label>
 							<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
 								<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">
@@ -47,7 +50,7 @@
 						<div class="popup__label popup__label--textarea">
 							<div class="popup__textarea-wrapper">
 								<textarea class="popup__input" rows="5" placeholder="Сообщение" required name="message" maxlength="1000"
-									@input="updateCharCount($event.target)" @focus="clearFieldError($event.target)" @blur="validateField($event.target)"></textarea>
+									@input="updateCharCount($event.target)" @focus="clearFieldError($event.target); expandContactsPopup($event.target)" @blur="validateField($event.target); collapseContactsPopup($event.target)"></textarea>
 								<label>Введите ваше сообщение</label>
 								<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
 									<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">

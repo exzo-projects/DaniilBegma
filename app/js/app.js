@@ -178,6 +178,22 @@ const app = () => {
       }
     },
 
+    expandContactsPopup(input) {
+      if (window.innerWidth > 968) return;
+      const popup = input.closest('.popup-contacts');
+      if (popup) {
+        popup.classList.add('popup-contacts--input-focused');
+      }
+    },
+
+    collapseContactsPopup(input) {
+      if (window.innerWidth > 968) return;
+      const popup = input.closest('.popup-contacts');
+      if (popup) {
+        popup.classList.remove('popup-contacts--input-focused');
+      }
+    },
+
     handleContactSubmit(event) {      
       event.preventDefault();
       const form = event.target;
