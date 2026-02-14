@@ -19,22 +19,43 @@
 						<hr>
 					</h2>
 
-					<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST"
-						class="popup-contacts__form">
+					<form @input.debounce="checkContactForm" @submit="handleContactSubmit($event)" action="" method="POST"
+						class="popup-contacts__form" novalidate autocomplete="off">
 
 						<div class="popup__label">
-							<input class="popup__input" type="text" name="fio" placeholder="Представьтесь" autocomplete="off" required />
+							<input class="popup__input" type="text" name="fio" placeholder="Представьтесь" autocomplete="off" required
+								@focus="clearFieldError($event.target)" @blur="validateField($event.target)" />
 							<label>Представьтесь</label>
+							<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
+								<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">
+								<img src="images/dist/input-check.svg" alt="Заполнено" class="icon-check">
+							</button>
+							<span class="popup__error">Укажите информацию</span>
 						</div>
 
 						<div class="popup__label">
-							<input class="popup__input" type="email" name="email" placeholder="E-mail" required />
+							<input class="popup__input" type="email" name="email" placeholder="E-mail" autocomplete="off" required
+								@focus="clearFieldError($event.target)" @blur="validateField($event.target)" />
 							<label>E-mail для обратной связи</label>
+							<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
+								<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">
+								<img src="images/dist/input-check.svg" alt="Заполнено" class="icon-check">
+							</button>
+							<span class="popup__error">Укажите информацию</span>
 						</div>
 
-						<div class="popup__label">
-							<textarea class="popup__input" rows="5" placeholder="Сообщение" name="message"></textarea>
-							<label>Введите ваше сообщение</label>
+						<div class="popup__label popup__label--textarea">
+							<div class="popup__textarea-wrapper">
+								<textarea class="popup__input" rows="5" placeholder="Сообщение" required name="message" maxlength="1000"
+									@input="updateCharCount($event.target)" @focus="clearFieldError($event.target)" @blur="validateField($event.target)"></textarea>
+								<label>Введите ваше сообщение</label>
+								<button type="button" class="popup__input-action" @mousedown.prevent="clearInput($event)">
+									<img src="images/dist/input-clear.svg" alt="Очистить" class="icon-clear">
+									<img src="images/dist/input-check.svg" alt="Заполнено" class="icon-check">
+								</button>
+								<span class="popup__char-count"><span class="current">0</span> / 1000</span>
+							</div>
+							<span class="popup__error">Укажите информацию</span>
 						</div>
 
 						<button type="submit" class="popup__submit">

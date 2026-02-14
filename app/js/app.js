@@ -113,8 +113,15 @@ const app = () => {
       let filledFlag = true;
 
       inputs.forEach((input) => {
+        const label = input.closest('.popup__label');
+
         if (input.value.trim() === "") {
           filledFlag = false;
+          label?.classList.remove('is-valid');
+        } else if (input.checkValidity()) {
+          label?.classList.add('is-valid');
+        } else {
+          label?.classList.remove('is-valid');
         }
       });
 
@@ -122,6 +129,78 @@ const app = () => {
         button.classList.add("filled");
       } else {
         button.classList.remove("filled");
+      }
+    },
+
+    clearFieldError(input) {
+      const label = input.closest('.popup__label');
+      if (label) {
+        label.classList.remove('has-error');
+      }
+    },
+
+    validateField(input) {
+      const label = input.closest('.popup__label');
+      if (!label) return;
+
+      const isValid = input.value.trim() !== '' && input.checkValidity();
+
+      if (isValid) {
+        label.classList.add('is-valid');
+        label.classList.remove('has-error');
+      } else {
+        label.classList.remove('is-valid');
+      }
+    },
+
+    clearInput(event) {
+      const target = event.target || event.srcElement;
+      const button = target.closest('.popup__input-action');
+      const label = button.closest('.popup__label');
+      const input = label.querySelector('.popup__input');
+
+      input.value = '';
+      input.focus();
+      label.classList.remove('is-valid', 'has-error');
+
+      if (input.tagName === 'TEXTAREA') {
+        this.updateCharCount(input);
+      }
+
+      this.checkContactForm();
+    },
+
+    updateCharCount(textarea) {
+      const label = textarea.closest('.popup__label');
+      const counter = label.querySelector('.popup__char-count .current');
+      if (counter) {
+        counter.textContent = textarea.value.length;
+      }
+    },
+
+    handleContactSubmit(event) {      
+      event.preventDefault();
+      const form = event.target;
+      const inputs = form.querySelectorAll('.popup__input[required]');
+      let isValid = true;
+
+      inputs.forEach((input) => {
+        const label = input.closest('.popup__label');
+        const isEmpty = input.value.trim() === '';
+        const isInputValid = input.checkValidity();
+
+        if (isEmpty || !isInputValid) {
+          isValid = false;
+          label.classList.add('has-error');
+          label.classList.remove('is-valid');
+        } else {
+          label.classList.remove('has-error');
+          label.classList.add('is-valid');
+        }
+      });
+
+      if (isValid) {
+        this.formHandler(form);
       }
     },
 

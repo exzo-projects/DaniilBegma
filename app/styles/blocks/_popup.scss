@@ -188,6 +188,133 @@
       transition-timing-function: ease;
       transition-duration: 0.2s;
     }
+
+    // Состояние ошибки
+    &.has-error {
+      & label {
+        color: #f15b03;
+      }
+
+      .popup__input {
+        background-color: #ffefe6;
+
+        &:hover {
+          background-color: #fde4d7;
+        }
+      }
+
+      .popup__error {
+        display: block;
+      }
+    }
+
+    // Состояние валидного поля (не в фокусе)
+    &.is-valid:not(:focus-within) {
+      .popup__input-action {
+        display: flex;
+
+        .icon-clear {
+          display: none;
+        }
+
+        .icon-check {
+          display: block;
+        }
+      }
+    }
+
+    // Показывать кнопку очистки когда поле в фокусе и заполнено
+    &:has(.popup__input:focus:not(:placeholder-shown)) {
+      .popup__input-action {
+        display: flex;
+      }
+    }
+
+    // Показывать кнопку когда поле невалидно
+    &:has(.popup__input:not(:placeholder-shown):invalid),
+    &:has(.popup__input.invalid) {
+      .popup__input-action {
+        display: flex;
+      }
+    }
+
+    // Для textarea позиционируем кнопку сверху справа
+    &--textarea {
+      .popup__input-action {
+        top: 16px;
+        transform: none;
+      }
+    }
+  }
+
+  &__error {
+    display: none;
+    font-size: 12px;
+    color: #f15b03;
+    margin-top: 4px;
+  }
+
+  &__input-action {
+    position: absolute;
+    right: 16px;
+    top: 28px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 2;
+
+    .icon-clear {
+      display: block;
+    }
+
+    .icon-check {
+      display: none;
+    }
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__char-count {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 12px;
+    color: #bdbdbd;
+    pointer-events: none;
+  }
+
+  &__label--textarea {
+    display: flex;
+    flex-direction: column;
+
+    .popup__input {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+    }
+
+    .popup__error {
+      position: static;
+      margin-top: 4px;
+    }
+  }
+
+  &__textarea-wrapper {
+    position: relative;
+    border-radius: 16px;
+
+    .popup__char-count {
+      bottom: 16px;
+    }
   }
 
   &__input {
